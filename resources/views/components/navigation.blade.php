@@ -9,7 +9,7 @@
             @if (request()->routeIs('app.tracks.show'))
             <a href="{{ route('app.weeks.show', ['week' => $week->uri]) }}">Classement</a>
             @else
-            <a href="{{ route('app.weeks.index') }}">Classementttt</a>
+            <a href="{{ route('app.weeks.index') }}">Classement</a>
             @endif
         </li>
         <li @class(['current' => request()->routeIs('app.tracks.create')])>
