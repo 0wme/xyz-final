@@ -8,9 +8,6 @@
                 <a href="{{ route('app.categories.show', ['category' => $category->id]) }}" class="block image">
                     <div class="description">
                         <div>
-                            {{--  --}}
-                        </div>
-                        <div>
                             <h2>{{ $category->name }}</h2>
                             <h3>{{ trans_choice('tracks.count', $category->tracks_count) }}</h3>
                         </div>
@@ -18,6 +15,8 @@
                 </a>
                 @endforeach
             </div>
+
+            {{ $categories->links('components.pagination') }}
         </section>
     </main>
 </x-app>

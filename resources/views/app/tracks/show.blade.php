@@ -19,6 +19,15 @@
                     <x-avatar size="medium" :src="$track->user->avatar" /> {{ $track->user->username }}
                 </dd>
 
+                <dt>Catégorie</dt>
+                <dd>
+                    @if($track->category)
+                        <a href="{{ route('app.categories.show', ['category' => $track->category->id]) }}" class="link">{{ $track->category->name }}</a>
+                    @else
+                        <span>Aucune catégorie</span>
+                    @endif
+                </dd>
+
                 <dt>Lecteur</dt>
                 <dd>
                     {!! $embed !!}
