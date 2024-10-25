@@ -22,6 +22,8 @@ class Track extends Model
         'artist',
         'url',
         'category_id',
+        'user_id',
+        'week_id',
     ];
 
     /**
